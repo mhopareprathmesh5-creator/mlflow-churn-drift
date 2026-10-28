@@ -1,0 +1,245 @@
+{
+  "A_control_no_drift": {
+    "description": "Two random halves of the established-customer hold-out (same population). Sanity check for false alarms.",
+    "drift_source": "none (control)",
+    "n_drifted_features": 0,
+    "share_drifted_features": 0.0,
+    "dataset_drift": 0,
+    "prediction_psi": 0.034423875427856646,
+    "prediction_ks_stat": 0.03429355281207136,
+    "prediction_ks_pvalue": 0.7850237322615246,
+    "prediction_drift": 0,
+    "mean_pred_churn_reference": 0.3915958451600823,
+    "mean_pred_churn_current": 0.39518049104254166,
+    "psi_tenure": 0.031021567972034272,
+    "psi_MonthlyCharges": 0.024818243718799635,
+    "psi_TotalCharges": 0.018358300929689826,
+    "psi_OnlineSecurity": 0.011114808998200058,
+    "psi_Dependents": 0.008405570628407024,
+    "psi_StreamingMovies": 0.005209474357546344,
+    "psi_OnlineBackup": 0.0050921317279536225,
+    "psi_Contract": 0.0028715056741804015,
+    "psi_MultipleLines": 0.0025970924877794692,
+    "psi_TechSupport": 0.002457407378723158,
+    "psi_InternetService": 0.002179997834770112,
+    "psi_PhoneService": 0.0019196806642433645,
+    "psi_SeniorCitizen": 0.0008940994068779531,
+    "psi_DeviceProtection": 0.000779929488322165,
+    "psi_PaymentMethod": 0.0005856577293137895,
+    "psi_StreamingTV": 0.00047869509925994435,
+    "psi_PaperlessBilling": 0.0003817192461173784,
+    "psi_gender": 0.00018819325836913115,
+    "psi_Partner": 3.104924120181333e-05,
+    "current_roc_auc": 0.8318181818181819,
+    "current_recall": 0.8064516129032258,
+    "current_f1": 0.49627791563275436,
+    "actual_churn_rate_reference": 0.1673525377229081,
+    "actual_churn_rate_current": 0.1700960219478738,
+    "roc_auc_drop": 0.012808049097592589,
+    "performance_alert": 0,
+    "drifted_features": [],
+    "top5": [
+      {
+        "feature": "tenure",
+        "test": "KS",
+        "p_value": 0.7430946447133426,
+        "psi": 0.031021567972034272,
+        "severity": "none"
+      },
+      {
+        "feature": "MonthlyCharges",
+        "test": "KS",
+        "p_value": 0.24789980617422816,
+        "psi": 0.024818243718799635,
+        "severity": "none"
+      },
+      {
+        "feature": "TotalCharges",
+        "test": "KS",
+        "p_value": 0.7430946447133426,
+        "psi": 0.018358300929689826,
+        "severity": "none"
+      },
+      {
+        "feature": "OnlineSecurity",
+        "test": "Chi-square",
+        "p_value": 0.1322302727358592,
+        "psi": 0.011114808998200058,
+        "severity": "none"
+      },
+      {
+        "feature": "Dependents",
+        "test": "Chi-square",
+        "p_value": 0.09009936472618672,
+        "psi": 0.008405570628407024,
+        "severity": "none"
+      }
+    ]
+  },
+  "B_new_customer_cohort": {
+    "description": "Reference = established customers (tenure > 12 m). Current = newly acquired customers (tenure <= 12 m).",
+    "drift_source": "naturally observed",
+    "n_drifted_features": 14,
+    "share_drifted_features": 0.7368421052631579,
+    "dataset_drift": 1,
+    "prediction_psi": 1.3126199886352807,
+    "prediction_ks_stat": 0.3310090273934264,
+    "prediction_ks_pvalue": 2.2314982739710944e-85,
+    "prediction_drift": 1,
+    "mean_pred_churn_reference": 0.39338816810131205,
+    "mean_pred_churn_current": 0.6210011723606549,
+    "psi_tenure": 8.471131253526433,
+    "psi_TotalCharges": 6.907448833403167,
+    "psi_Contract": 1.5134221611776204,
+    "psi_MonthlyCharges": 0.5544892040673491,
+    "psi_PaymentMethod": 0.5017626286253049,
+    "psi_Partner": 0.464928272383439,
+    "psi_DeviceProtection": 0.4598158719974096,
+    "psi_OnlineBackup": 0.4343432139235335,
+    "psi_MultipleLines": 0.3559326460158796,
+    "psi_OnlineSecurity": 0.3292239915005337,
+    "psi_TechSupport": 0.31314639733091565,
+    "psi_StreamingMovies": 0.2894677565521454,
+    "psi_StreamingTV": 0.2747157210462099,
+    "psi_Dependents": 0.11930899675013519,
+    "psi_InternetService": 0.004771658591977625,
+    "psi_PhoneService": 0.0020179102128302226,
+    "psi_SeniorCitizen": 0.0015331302941929512,
+    "psi_PaperlessBilling": 5.410548140372953e-05,
+    "psi_gender": 7.506758131753924e-06,
+    "current_roc_auc": 0.765341209034228,
+    "current_recall": 0.8659594985535197,
+    "current_f1": 0.7093206951026856,
+    "actual_churn_rate_reference": 0.16872427983539096,
+    "actual_churn_rate_current": 0.47438243366880145,
+    "roc_auc_drop": 0.07928502188154651,
+    "performance_alert": 1,
+    "drifted_features": [
+      "tenure",
+      "TotalCharges",
+      "Contract",
+      "MonthlyCharges",
+      "PaymentMethod",
+      "Partner",
+      "DeviceProtection",
+      "OnlineBackup",
+      "MultipleLines",
+      "OnlineSecurity",
+      "TechSupport",
+      "StreamingMovies",
+      "StreamingTV",
+      "Dependents"
+    ],
+    "top5": [
+      {
+        "feature": "tenure",
+        "test": "KS",
+        "p_value": 0.0,
+        "psi": 8.471131253526433,
+        "severity": "major"
+      },
+      {
+        "feature": "TotalCharges",
+        "test": "KS",
+        "p_value": 0.0,
+        "psi": 6.907448833403167,
+        "severity": "major"
+      },
+      {
+        "feature": "Contract",
+        "test": "Chi-square",
+        "p_value": 2.0703253514546984e-252,
+        "psi": 1.5134221611776204,
+        "severity": "major"
+      },
+      {
+        "feature": "MonthlyCharges",
+        "test": "KS",
+        "p_value": 1.3492547545543944e-49,
+        "psi": 0.5544892040673491,
+        "severity": "major"
+      },
+      {
+        "feature": "PaymentMethod",
+        "test": "Chi-square",
+        "p_value": 4.02358838882032e-93,
+        "psi": 0.5017626286253049,
+        "severity": "major"
+      }
+    ]
+  },
+  "C_price_revision": {
+    "description": "Reference hold-out vs. the same customers after a simulated 18% tariff hike and 30% of auto-pay customers moving to electronic cheque. Ground-truth churn not yet observed.",
+    "drift_source": "simulated",
+    "n_drifted_features": 2,
+    "share_drifted_features": 0.10526315789473684,
+    "dataset_drift": 0,
+    "prediction_psi": 0.018834987153673946,
+    "prediction_ks_stat": 0.050754458161865634,
+    "prediction_ks_pvalue": 0.04674630568142681,
+    "prediction_drift": 0,
+    "mean_pred_churn_reference": 0.39338816810131205,
+    "mean_pred_churn_current": 0.3666533371036591,
+    "psi_MonthlyCharges": 1.0470344947884018,
+    "psi_PaymentMethod": 0.13764388847535425,
+    "psi_TotalCharges": 0.07923896200356761,
+    "psi_tenure": 0.0,
+    "psi_gender": 0.0,
+    "psi_Partner": 0.0,
+    "psi_SeniorCitizen": 0.0,
+    "psi_PhoneService": 0.0,
+    "psi_MultipleLines": 0.0,
+    "psi_InternetService": 0.0,
+    "psi_Dependents": 0.0,
+    "psi_OnlineSecurity": 0.0,
+    "psi_OnlineBackup": 0.0,
+    "psi_TechSupport": 0.0,
+    "psi_DeviceProtection": 0.0,
+    "psi_StreamingTV": 0.0,
+    "psi_StreamingMovies": 0.0,
+    "psi_Contract": 0.0,
+    "psi_PaperlessBilling": 0.0,
+    "drifted_features": [
+      "MonthlyCharges",
+      "PaymentMethod"
+    ],
+    "top5": [
+      {
+        "feature": "MonthlyCharges",
+        "test": "KS",
+        "p_value": 3.36651880635889e-39,
+        "psi": 1.0470344947884018,
+        "severity": "major"
+      },
+      {
+        "feature": "PaymentMethod",
+        "test": "Chi-square",
+        "p_value": 2.6810241175254126e-21,
+        "psi": 0.13764388847535425,
+        "severity": "moderate"
+      },
+      {
+        "feature": "TotalCharges",
+        "test": "KS",
+        "p_value": 5.057976361640999e-06,
+        "psi": 0.07923896200356761,
+        "severity": "none"
+      },
+      {
+        "feature": "tenure",
+        "test": "KS",
+        "p_value": 1.0,
+        "psi": 0.0,
+        "severity": "none"
+      },
+      {
+        "feature": "gender",
+        "test": "Chi-square",
+        "p_value": 1.0,
+        "psi": 0.0,
+        "severity": "none"
+      }
+    ]
+  },
+  "baseline_reference_roc_auc": 0.8446262309157745
+}

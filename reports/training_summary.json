@@ -1,0 +1,31 @@
+{
+  "best_model": "logistic_regression",
+  "registered_model": "telco-churn-classifier",
+  "version": 1,
+  "runs": {
+    "logistic_regression": {
+      "run_id": "b82709f694af46239340f047d214bd77",
+      "accuracy": 0.7325102880658436,
+      "precision": 0.3686131386861314,
+      "recall": 0.8211382113821138,
+      "f1": 0.5088161209068011,
+      "roc_auc": 0.8446262309157745
+    },
+    "random_forest": {
+      "run_id": "b09606cc81c14068ae3fff0ae1b5572d",
+      "accuracy": 0.7469135802469136,
+      "precision": 0.3782178217821782,
+      "recall": 0.7764227642276422,
+      "f1": 0.5086551264980027,
+      "roc_auc": 0.8423857629665407
+    },
+    "gradient_boosting": {
+      "run_id": "c1db2360d22a458e9e02f2d716d19b43",
+      "accuracy": 0.8443072702331962,
+      "precision": 0.5673758865248227,
+      "recall": 0.3252032520325203,
+      "f1": 0.4134366925064599,
+      "roc_auc": 0.8346380369744292
+    }
+  }
+}
